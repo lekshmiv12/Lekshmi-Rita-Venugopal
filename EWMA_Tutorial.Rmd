@@ -92,7 +92,7 @@ simulation <- simulation %>%
 ggplot(simulation, aes(x = Date, y = ewma)) +
   geom_line() +
   geom_ribbon(aes(ymin = ewma_ucl, ymax = ewma_ucl), fill = "grey", alpha = 0.3) +
-  geom_point(aes(color = out_of_control), size = 1) +
+  geom_point(aes(color = Out_of_control), size = 1) +
   geom_hline(yintercept = ewma_ucl, linetype = "dashed", color = "black") +
   geom_hline(yintercept = ewma_center, linetype = "dashed", color = "black") +
   labs(title = "EWMA Control Chart", x = "Date", y = "EWMA") +
